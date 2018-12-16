@@ -24,7 +24,7 @@ import java.net.InetAddress;
  */
 public class ChatDemo {
 	public static void main(String[] args) throws IOException {
-		DatagramSocket sendSocket = new DatagramSocket();
+		DatagramSocket sendSocket = new DatagramSocket(10000);
 		DatagramSocket receSocket = new DatagramSocket(10002);
 
 		new Thread(new Send(sendSocket)).start();
